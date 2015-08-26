@@ -14,6 +14,7 @@ p,
 a,
 address,
 em,
+strong,
 img,
 ol,
 ul,
@@ -46,7 +47,6 @@ main{
 	font-size:100%;
 	font-style:normal;
 	font-weight:normal;
-	list-style:none;
 	margin:0;
 	padding:0;
 	vertical-align:baseline;
@@ -97,15 +97,40 @@ thead th{background:#0aa;}
 tbody tr:nth-child(even) td{background:#eee;}
 
 /* SPACING */
-p,
-h5,
-h6{margin-bottom:10px;}
-h1{}
-h2{}
-h3{}
-h4{}
+p{margin-bottom:1em;}
+h1{
+	font-size:3em;
+	margin-bottom:0.5em;
+}
+h2{
+	font-size:2em;
+	margin-bottom: 0.75em;
+}
+h3{
+	font-size:1.5em;
+	margin-bottom:1em;
+}
+h4{
+	font-size:1.2em;
+	margin-bottom:1.25em;
+}
+h5{
+	font-size:1em;
+	margin-bottom:1.5em;
+}
+h6{
+	font-size:1em;
+	margin-bottom:1.5em;
+}
 ul,
-ol{margin:10px 0;}
+ol{
+	list-style:none;
+	margin:10px 0;
+}
+h1.logo-container{
+	overflow: hidden;
+	text-indent: -9999px;
+}
 
 /* FORMS */
 input[type="text"],
@@ -120,7 +145,7 @@ textarea{
 	-webkit-appearance:none;
 	appearance:none;
 	border:1px solid #ccc;
-	padding:5px 4px;
+	padding:5px;
 	width:97%;
 }
 input[type="text"]:focus,
@@ -132,22 +157,18 @@ input[type="url"]:focus,
 select:focus,
 textarea:focus{border-color:#900;}
 select{
-	width:99%;
 	background:url(img/selectDown.png) no-repeat right 11px;
-	overflow: hidden;
+	padding:4px 3px;
+	width:99%;
 }
-select:focus{background:url(img/selectUp.png) no-repeat right 11px;}
-select::-ms-expand {
- /* IE 8 */
- -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
- /* IE 5-7 */
- filter: alpha(opacity=0);
- /* Good browsers :) */
- opacity:0;
+select:focus{
+	background:url(img/selectUp.png) no-repeat right 11px;
+	outline:0;
 }
 textarea{
+	font-family:Arial, Helvetica, sans-serif;
 	max-width:97%;
-	overflow-x:hidden;
+	overflow:hidden;
 }
 label,
 input[type="checkbox"],
@@ -163,6 +184,10 @@ input[type="reset"]{
 	color:#fff;
 	cursor:pointer;
 	padding:5px 10px;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
 }
 fieldset{max-width: 500px;}
 
@@ -192,7 +217,9 @@ fieldset{max-width: 500px;}
 .nBr{border-right:0 !important;}
 .nBb{border-bottom:0 !important;}
 .nBl{border-left:0 !important;}
-	.nBa{background:transparent !important;}
+	.bNo{background:none !important;}
+	.bTr{background:transparent !important;}
+	.vHi{visibility:hidden !important;}
 .nPa{padding:0 !important;}
 .nPt{padding-top:0 !important;}
 .nPr{padding-right:0 !important;}
@@ -207,3 +234,5 @@ fieldset{max-width: 500px;}
 .tRi{text-align:right !important;}
 .tCe{text-align:center !important;}
 .tJu{text-align:justify !important;}
+	.zUp{z-index:999;}
+	.zDo{z-index:1;}
